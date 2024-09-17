@@ -9,8 +9,9 @@ The primary objective is to improve the Occupational Health and Safety (OHS) pro
 •	Perform in-depth analysis of workplace accident reports and other related data.
 •	Visualize insights to inform policies, reduce accidents, and improve workplace safety.
 Data Analytics Platform
-https://github.com/Priya-Babu/Data-Analyst-Priya/blob/fe713df8e0da1db51a5fd2ec9c0482763fdc051a/images/Picture1.png
-4. Tools/Technology Used
+![Picture1](https://github.com/user-attachments/assets/2d1d1e62-5ded-4bdc-9f00-b1cb060eb306)
+
+5. Tools/Technology Used
 •	AWS S3: For scalable data storage.
 •	AWS Glue & Glue DataBrew: For data extraction, cleaning, transformation, and pipeline implementation.
 •	AWS Athena: For running SQL queries on data stored in S3.
@@ -18,14 +19,14 @@ https://github.com/Priya-Babu/Data-Analyst-Priya/blob/fe713df8e0da1db51a5fd2ec9c
 •	AWS IAM & KMS: For managing data security, access control, and encryption.
 •	AWS CloudWatch & CloudTrail: For monitoring data, performance, and security metrics.
 •	Excel: For data visualization and reporting.
-5. Project Timeline
+6. Project Timeline
 This project was completed in a phased approach over a period of 3 months. Each step, from data discovery to publishing and monitoring, was carefully planned and executed to ensure data security and accurate insights.
-6. Roles and Responsibilities
+7. Roles and Responsibilities
 •	Project Lead: Managed the overall design and implementation of the AWS Data Analytics Platform, ensuring alignment with project goals.
 •	Data Engineer: Handled data discovery, ingestion, and storage processes using AWS S3 and Glue.
 •	Data Analyst: Analyzed workplace accidents data with AWS Athena and visualized results using Excel.
 •	Cloud Engineer: Implemented data protection, governance, and monitoring using AWS IAM, KMS, CloudWatch, and CloudTrail.
-7. Detailed Project Description
+8. Detailed Project Description
 •	Data Analytical Question Formulation: The goal was to enhance OHSP performance by focusing on the parameter of workplace accidents.
  
 •	Data Discovery: Dummy workplace accident report files were generated and downloaded as Excel files, forming the foundation of the analysis.
