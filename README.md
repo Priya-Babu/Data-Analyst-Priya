@@ -9,7 +9,7 @@ The primary objective is to improve the Occupational Health and Safety (OHS) pro
 •	Perform in-depth analysis of workplace accident reports and other related data.
 •	Visualize insights to inform policies, reduce accidents, and improve workplace safety.
 Data Analytics Platform
-
+https://github.com/Priya-Babu/Data-Analyst-Priya/blob/fe713df8e0da1db51a5fd2ec9c0482763fdc051a/images/Picture1.png
 4. Tools/Technology Used
 •	AWS S3: For scalable data storage.
 •	AWS Glue & Glue DataBrew: For data extraction, cleaning, transformation, and pipeline implementation.
