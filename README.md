@@ -1,173 +1,168 @@
-**Project Portfolio for AWS Data Analytics Platform**
+**Descriptive Analysis**
 
-**Project Title:** AWS Data Analytics Platform for Occupational Health and Safety Improvement at University Canada West
+**Project Description:**
 
-**1. Project Title**
+Descriptive Analysis of Workplace Accidents to Improve Occupational Health and Safety (OHS) Procedures
 
-AWS Data Analytics Platform for Enhancing Occupational Health and Safety Procedures
+**Project Title:**
 
-**2. Project Goal**
+Enhancing Occupational Health and Safety Procedures using AWS Data Analytics at University Canada West (UCW)
 
-The primary objective is to improve the Occupational Health and Safety (OHS) procedures in the HR department at University Canada West (UCW) by analyzing workplace accidents data. The project leverages AWS services to provide data storage, analysis, and visualization to aid decision-making and performance enhancement.
+**Objective:**
 
-**3. Objective of the Project**
-- Streamline the HR department’s handling of workplace accidents by developing a secure, scalable data analytic platform.
--	Perform in-depth analysis of workplace accident reports and other related data.
--	Visualize insights to inform policies, reduce accidents, and improve workplace safety.
+The primary goal of this project is to conduct a descriptive analysis of workplace accidents at UCW aimed at improving Occupational Health and Safety procedures. This analysis aims to summarize key characteristics of reported workplace accidents, identify trends, and generate actionable insights that can inform the HR department’s safety policies and accident prevention measures.
 
-**Data Analytics Platform**
+  **Descriptive Metric**
 
-![Picture1](https://github.com/user-attachments/assets/2d1d1e62-5ded-4bdc-9f00-b1cb060eb306)
+ ![Picture1](https://github.com/user-attachments/assets/d7394010-e6d6-4c5d-91d7-fdd6cd9c3ce9)
 
+  **Data Analytics Platform**
+ 
+![Picture2](https://github.com/user-attachments/assets/bde766c5-913f-4b46-83a2-b33cb86ced21)
 
-**5. Tools/Technology Used**
+**Dataset:**
+The dataset used for analysis includes workplace accident reports generated using dummy data. The dataset contains the following key features:
 
--	**AWS S3:** For scalable data storage.
--	**AWS Glue & Glue DataBrew:** For data extraction, cleaning, transformation, and pipeline implementation.
--	**AWS Athena:** For running SQL queries on data stored in S3.
--	**AWS EC2:** For hosting and publishing the results through a web server.
--	**AWS IAM & KMS:** For managing data security, access control, and encryption.
--	**AWS CloudWatch & CloudTrail:** For monitoring data, performance, and security metrics.
--	**Excel:** For data visualization and reporting.
+The dataset includes OHS incident reports from University Canada West, with the following key features:
+
+- Incident_ID: Unique identifier for each incident
+- Date_of_Incident: Date when the incident occurred
+- Incident_Type: Type of incident (e.g., slip, trip, fall, equipment-related)
+- Severity: Severity level of the incident (e.g., minor, moderate, severe)
+- Department: The department in which the incident occurred
+- Employee_ID: Identification number for the employee involved
+- Description: A brief description of the incident
+- Action_Taken: Actions taken following the incident
+- Hours_Worked: Hours worked before the incident
+- Days_Lost: Number of workdays lost due to the incident
   
-**6. Project Timeline**
+**Methodology:**
 
-This project was completed in a phased approach over a period of 3 months. Each step, from data discovery to publishing and monitoring, was carefully planned and executed to ensure data security and accurate insights.
+**1.	Data Collection and Preparation:**
+- Load the dummy workplace accident report data using AWS S3 for storage and AWS Glue for data cleaning and preparation.
+- Perform data cleaning with AWS Glue DataBrew to address missing values, correct data types, and standardize report formats.
 
-**7. Roles and Responsibilities**
+  **AWS S3 Storage Design**
 
-- **Project Lead:** Managed the overall design and implementation of the AWS Data Analytics Platform, ensuring alignment with project goals.
--	**Data Engineer:** Handled data discovery, ingestion, and storage processes using AWS S3 and Glue.
--	**Data Analyst:** Analyzed workplace accidents data with AWS Athena and visualized results using Excel.
--	**Cloud Engineer:** Implemented data protection, governance, and monitoring using AWS IAM, KMS, CloudWatch, and CloudTrail.
+![Picture3](https://github.com/user-attachments/assets/e5d9257d-8645-48e8-aa8f-529dc064f559)
 
-**8. Detailed Project Description**
+  **Ingested Dataset in S3**
 
--	**Data Analytical Question Formulation:** The goal was to enhance OHSP performance by focusing on the parameter of workplace accidents.
+ ![Picture4](https://github.com/user-attachments/assets/d3e9de7f-b720-4419-9f5c-f09d199e46b8)
   
- ![Picture2](https://github.com/user-attachments/assets/91b90d3c-b45e-46ca-a9fa-8dc3fe02f1ca)
+  **AWS DataBrew – Cleaning and Structuring**
+ 
+ ![Picture5](https://github.com/user-attachments/assets/0711f20b-9dca-40b9-a0e3-d56145ea8e79)
 
--	**Data Discovery:** Dummy workplace accident report files were generated and downloaded as Excel files, forming the foundation of the analysis.
-  
-**Operational Dataset**
-
-![Picture3](https://github.com/user-attachments/assets/b790f118-8445-467e-a653-58587f03c1e5)
-
--	**Data Storage Design:** Utilized a three-tier data structure in AWS S3 (Landing, Raw, Curated) for secure, scalable, and efficient storage.
-
-**AWS S3 Storage Design**
-
- ![Picture4](https://github.com/user-attachments/assets/2bd66230-d224-4785-a32d-455b179d07c5)
-
--	**Data Ingestion:** Data from the operational environment was moved to the analysis environment (AWS S3).
-  
-**Ingested Dataset in S3**
-
- ![Picture5](https://github.com/user-attachments/assets/e292a453-b793-4af3-a22c-28afb3b197d8)
-
-**Pipeline Design:** The ETL process was designed using AWS Glue and Glue DataBrew to clean and structure the data.
-
-**AWS DataBrew – Cleaning and Structuring**
-
-![Picture6](https://github.com/user-attachments/assets/e8271c81-fcad-4796-a45d-1bda62a4d8bf)
-![Picture7](https://github.com/user-attachments/assets/0c04b07f-17f5-44ed-a413-bfc9f1b90b8c)
-
+ ![Picture6](https://github.com/user-attachments/assets/032f0678-d099-4af7-9f69-d00bccc13062)
+ 
 The Cleaned and Structured Dataset from AWS DataBrew is Stored in the S3 Raw Folder.
 
-**ETL Diagram (Designed in draw.io)**
-              
- ![Picture8](https://github.com/user-attachments/assets/9f6f1ff0-5ec7-435d-a8f3-fb17a64efce1)
-
-The designed ETL is implemented in AWS Glue to analyze data. The resultant data is stored in Curated S3 Bucket.
-
-**AWS Glue ETL Implementation**
-
-![Picture9](https://github.com/user-attachments/assets/ca8b44b7-7fff-4d50-b2ac-7fc821eba25d)
-![Picture10](https://github.com/user-attachments/assets/d78bb924-ee00-48fb-94b3-bfc2f15ad593)
-
-- **Data Analysis:** AWS Athena was used to run SQL queries on the cleaned data stored in S3, generating insights into workplace accident trends and patterns.
-
-**AWS Athena – Table and Database Creation**
-
- ![Picture11](https://github.com/user-attachments/assets/5bafa8a6-feb9-4ea2-aef1-c785ffea7cf4)
-
-- **Data Visualization:** The analyzed data was exported to Excel for creating charts and dashboards that visualize accident trends, helping the HR team improve safety procedures.
+  **AWS Glue ETL Implementation**
   
-The Analysed Data is visualized using Excel.
-  
-**Data Analysis Report**
+ ![Picture7](https://github.com/user-attachments/assets/8f776a6d-7c20-4353-a824-9511c87b924d)
 
-![Picture12](https://github.com/user-attachments/assets/eaf14251-3786-4d25-a56e-f0853c98efd5)
+![Picture8](https://github.com/user-attachments/assets/bb3c7b79-58b7-4008-bdd9-7386adfe8cf2)
+
+The Analyzed Dataset from AWS Glue is Stored in the S3 Curated Folder.
+
+**2.	Descriptive Statistics:**
+
+- Calculated summary statistics for key variables, including:
+    - Total number of incidents per department
+    - Average severity of incidents
+    - Number of incidents by type
+    - Number of workdays lost per department
+- Queried incident data in AWS Athena, which allowed SQL-based analysis directly on S3 data.
+  
+**3.	Data Visualization:**
+
+Use Excel and AWS Athena for analysis and create visual representations of findings.
+
+  **AWS Athena – Table and Database Creation**
+
+![Picture9](https://github.com/user-attachments/assets/584fde0d-f79c-46f1-9e91-e11fc469b61f)
+
+  **Data Analysis Report**
  
-- **Data Publishing:** Results were published on an AWS EC2 web server, making them accessible to stakeholders via web applications.
+![Picture10](https://github.com/user-attachments/assets/e0c99c7b-1187-4218-a5c0-b637ef5d5fab)
 
-**AWS EC2 General Server**
+**4.	Data Governance and Security:**
 
-![Picture13](https://github.com/user-attachments/assets/82dfde18-fc2a-429d-9e3a-d91659ea2c1a)
+- Managed data governance using AWS Glue's data classification and evaluation features.
+- Implemented security protocols with AWS IAM and AWS KMS for data protection.
+- Set up backups and recovery processes to safeguard incident records.
+  
+  **AWS Key Management Service**
 
-**AWS EC2 Web Server**
+ ![Picture11](https://github.com/user-attachments/assets/b1d47b5d-f838-436e-86db-8c9cef92734f)
 
-![Picture14](https://github.com/user-attachments/assets/b221f9ed-ee32-494a-b03d-ec4e89be6a48)
+  **S3 Bucket Encrypted using the KMS Key**
 
-- **Data Protection, Monitoring & Governance:** CloudWatch dashboards were used for real-time monitoring, and CloudTrail ensured that API activity was tracked for security purposes. IAM and KMS managed access control and encryption to ensure secure handling of sensitive information (Data Protection).
-
-**AWS Key Management Service**
-
-<img width="468" alt="Picture15" src="https://github.com/user-attachments/assets/12155a70-5c31-4ae4-b88f-0e36fc0b54e3">
-
-**S3 Bucket Encrypted using the KMS Key**
-
- ![Picture16](https://github.com/user-attachments/assets/d8357f5c-c09f-4316-821c-ea1cabf88bd9)
-
-**Replication Rule**
-
-![Picture17](https://github.com/user-attachments/assets/0dd4f667-b6d0-415f-adb5-e54fe2b222b9)
+![Picture12](https://github.com/user-attachments/assets/90a8a3d3-09c8-48fe-842f-ecdcf749ec30)
 
 S3 Bucket backup is created using the Replication Rule.
 
-**AWS Glue – Quality Check**
+  **Replication Rule**
+  
+ ![Picture13](https://github.com/user-attachments/assets/d6f8a511-1969-4067-94e1-ab3daa41f707)
 
-![Picture18](https://github.com/user-attachments/assets/a39dc514-78f5-4609-8a8b-83617e4225bb)
+  **AWS Glue – Quality Check**
 
-Quality of the dataset can be assessed using AWS Glue inbuild functions (Detect Sensitive Data and Evaluate Data Quality) and the passed data is stored in the S3 Trusted Folder.
+![Picture14](https://github.com/user-attachments/assets/a2d8ec5b-ebcd-4e69-a1f1-43ca208afc1e)
 
-**AWS Glue Workflow**
+The dataset's quality can be assessed using AWS Glue inbuild functions (Detect Sensitive Data and Evaluate Data Quality), and the passed data is stored in the S3 Trusted Folder.
 
- ![Picture19](https://github.com/user-attachments/assets/a38ea477-0b66-4acf-accc-12796c4ca088)
+  **AWS Glue Workflow**
 
-To run the ETL weekly, a schedule is created and is called using a workflow.
+![Picture15](https://github.com/user-attachments/assets/e3b756b7-c425-4a7f-8692-eff83eb3be90)
 
-**S3 Trust Folder**
+A schedule is created to run the ETL weekly, and it is called using a workflow.
 
-![Picture20](https://github.com/user-attachments/assets/42dd354c-bf8c-4ede-9d6d-ee66ea4ed4ca)
+  **S3 Trust Folder**
 
-**AWS CloudWatch Dashboard**
+![Picture16](https://github.com/user-attachments/assets/4a479632-6f7c-4493-822f-7e4c6fb7cd7c)
 
- ![Picture21](https://github.com/user-attachments/assets/4c5ad589-66ba-4e51-b79a-7885d09d217b)
+  **AWS CloudWatch Dashboard**
+
+![Picture17](https://github.com/user-attachments/assets/8fb16baa-c404-4f23-b82e-11bddb3d0556)
 
 CloudWatch is used to monitor expenses and usage. An alarm is also added to the dashboard when the cost exceeds the threshold.
 
-**AWS CloudTrail**
+  **AWS CloudTrail**
 
-![Picture22](https://github.com/user-attachments/assets/2cb97933-d6f2-4db9-b372-51aecf38d83d)
+![Picture18](https://github.com/user-attachments/assets/05fdcfe1-a1e4-4228-b900-4160557acc3b)
 
-AWS CloudTrail saves the user in the S3 Bucket to track the API activity to prevent security breaches.
+AWS CloudTrail saves the userlog in the S3 Bucket to track the API activity to prevent security breaches.
 
-**8. Challenges and Solutions**
-- Challenge: Handling large datasets from the operational environment and ensuring data integrity during ingestion.
-  - _Solution:_ Used AWS Glue to automate the ETL process, ensuring efficient and accurate data transformation.
-- Challenge: Managing data security while providing accessibility to relevant stakeholders.
-  - _Solution:_ Implemented AWS IAM and KMS for strict access controls and data encryption in transit and at rest.
-- Challenge: Cost monitoring during the project’s runtime.
-  - _Solution:_ Set up CloudWatch alarms to monitor and alert when costs exceed predefined thresholds.
-   
-**9. Results/Outcomes**
+**5.	Insights and Findings:**
 
-- Enhanced Data Analysis: Through AWS Athena, the analysis provided actionable insights into workplace accidents, revealing trends and identifying areas for improvement in OHS procedures.
-- Improved Safety Practices: Visualized data helped HR refine policies, ultimately reducing the number of workplace accidents and improving overall employee safety.
-- Scalable and Secure Data Platform: The use of AWS services ensured the platform is scalable, secure, and easily adaptable to future analytical needs.
+The analysis revealed key trends and areas for improvement:
+
+- High-Risk Departments: Certain departments (e.g., Facilities, Maintenance) showed a higher frequency of severe incidents.
+- Incident Timing: Incidents tend to occur towards the end of shifts, correlating with increased fatigue.
+- Common Causes: The most common incident types were slips, trips, and falls, which led to significant downtime.
   
-**10. Conclusion**
+**6.	Recommendations:**
+- Training and Awareness: Conduct targeted safety training in high-risk departments.
+- Fatigue Management: Implement break schedules to reduce fatigue-induced accidents.
+- Safety Audits: Increase the frequency of safety audits in departments with higher incidents.
+- Preventive Measures: Install slip-resistant flooring and improve signage in areas prone to slips and falls.
+  
+**Tools and Technologies:**
 
-The AWS Data Analytics Platform provided a comprehensive solution to analyze workplace accidents, driving improvements in UCW’s Occupational Health and Safety procedures. By utilizing various AWS services, the project achieved reliable, secure, and scalable data management, along with insightful analysis that informed key decision-making in the HR department. The successful deployment of this platform can serve as a template for other departments seeking similar improvements through data-driven insights.
+- AWS S3 for secure and scalable data storage.
+- AWS Glue and DataBrew for data cleaning, structuring, and governance.
+- AWS Athena for SQL querying and analysis.
+- Excel for data visualization and reporting.
+- AWS EC2 for data publishing and web hosting.
+- AWS CloudWatch and CloudTrail are used to monitor data usage and security.
+  
+**Deliverables:**
+
+- A comprehensive report detailing the methods, findings, and recommendations for improving OHS procedures.
+- Data visualizations to highlight key safety risks and trends.
+- A presentation summarizing actionable insights and recommendations for the HR and Safety departments.
+  
+This descriptive analysis project aims to clearly understand workplace accident patterns, enabling UCW to enhance Occupational Health and Safety procedures and create a safer working environment for all staff and departments.
 
