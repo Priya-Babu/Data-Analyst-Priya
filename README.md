@@ -1,4 +1,4 @@
-**Descriptive Analysis**
+**Descriptive Analysis - Project 1 (University Canada West)**
 
 **Project Description:**
 
@@ -166,3 +166,171 @@ The analysis revealed key trends and areas for improvement:
   
 This descriptive analysis project aims to clearly understand workplace accident patterns, enabling UCW to enhance Occupational Health and Safety procedures and create a safer working environment for all staff and departments.
 
+
+
+
+**Descriptive Analysis – Project 2 (Vancouver City)**
+
+**Project Description:**
+
+Descriptive Analysis of Property Infrastructure Development in Vancouver
+
+**Project Title:**
+
+Analyzing the Current Improvement Value (CIV) of Properties in Vancouver
+
+**Objective:**
+
+The primary objective of this project is to perform a descriptive analysis of property infrastructure development in Vancouver by examining the Current Improvement Value (CIV) of properties. This analysis aims to assess key infrastructure parameters such as property value changes, improvements made to properties, zoning classifications, and tax assessments, using AWS services to enable better city planning and resource allocation.
+
+**Data Analytics Platform**
+
+![Picture1](https://github.com/user-attachments/assets/e69c023a-042a-4c02-a6b0-5b576a11e313)
+
+**Dataset:**
+
+The dataset includes data sourced from Open Data Vancouver, downloaded in Excel and CSV formats, containing the following key features:
+
+![Picture2](https://github.com/user-attachments/assets/4b96a993-ba81-499e-a0c3-e0a4728b8808)
+
+- PID: Unique identifier for each property
+- LEGAL_TYPE: Type of legal designation for the property
+- FOLIO: Property identification number for municipal tax purposes
+- LAND_COORDINATE: Geographical coordinates of the property
+- ZONING_DISTRICT: Zoning designation for the district
+- ZONING_CLASSIFICATION: Detailed land use classification
+- LOT: Plot number within the district
+- PLAN: Subdivision plan details
+- BLOCK: Block number within the district
+- DISTRICT_LOT: District lot identifier
+- FROM_CIVIC_NUMBER: Starting civic address number
+- TO_CIVIC_NUMBER: Ending civic address number
+- STREET_NAME: Name of the street
+- PROPERTY_POSTAL_CODE: Postal code of the property
+- NARRATIVE_LEGAL_LINE1 to NARRATIVE_LEGAL_LINE5: Legal descriptions of the property
+- CURRENT_LAND_VALUE: Latest appraised value of the land
+- CURRENT_IMPROVEMENT_VALUE: Value of improvements on the property
+- TAX_ASSESSMENT_YEAR: Year of the tax assessment
+- PREVIOUS_LAND_VALUE: Land value from the previous year
+- PREVIOUS_IMPROVEMENT_VALUE: Improvement value from the previous year
+- YEAR_BUILT: Year the property was constructed
+- BIG_IMPROVEMENT_YEAR: Year of significant property improvements
+- TAX_LEVY: Tax amount levied on the property
+- NEIGHBOURHOOD_CODE: Code representing the neighborhood
+- REPORT_YEAR: Year the data was reported
+ 
+**Methodology:**
+
+**1.	Data Collection and Preparation:**
+
+- Import the dataset into AWS S3 for secure storage.
+- Use AWS Glue DataBrew to clean and structure the dataset, addressing any missing values and formatting issues.
+  
+**AWS S3 Storage Design**
+ 
+![Picture3](https://github.com/user-attachments/assets/2d95bf3a-2495-4d45-948e-d6b52be917e0)
+
+![Picture4](https://github.com/user-attachments/assets/10e7b814-8d56-41d3-ab63-8e68f446b45d)
+
+**Ingested Dataset in S3**
+
+![Picture5](https://github.com/user-attachments/assets/02292896-6392-46da-b8af-c6a9572ce25c)
+
+**AWS DataBrew – Cleaning and Structuring**
+
+![Picture6](https://github.com/user-attachments/assets/6c8ec4ed-703b-4fd7-8bda-2769db61470a)
+
+The Cleaned and Structured Dataset from AWS DataBrew is Stored to S3 Raw Folder.
+
+**AWS Glue ETL Implementation**
+
+![Picture7](https://github.com/user-attachments/assets/e457edea-3b63-469d-a914-970d6f6a8cce)
+
+The Analyzed Dataset from AWS Glue is Stored to S3 Curated Folder.
+
+**2.	Descriptive Statistics:**
+
+Calculate summary statistics such as:
+- Average Current Improvement Value (CIV)
+- Number of significant improvements by year
+- Distribution of land and improvement values by neighborhood and zoning district
+  
+**3.	Data Visualization:**
+
+Use Excel and AWS Athena for analysis and create visual representations of findings (Changes in Current Improvement Value)
+
+**AWS Athena – Table and Database Creation**
+ 
+![Picture8](https://github.com/user-attachments/assets/e92ed0c9-4be2-4cf3-ae73-3e352703e3fc)
+![Picture9](https://github.com/user-attachments/assets/dd0ce344-a659-4ed8-b105-993c01d95bac)
+
+**Data Analysis Report**
+ 
+![Picture10](https://github.com/user-attachments/assets/6e6b2f7d-3d6c-4155-a1b9-3486230fb09f)
+
+**4.	Data Governance and Security:**
+
+- Managed data governance using AWS Glue's data classification and evaluation features.
+- Implemented security protocols with AWS IAM and AWS KMS for data protection.
+- Set up backups and recovery processes for safeguarding city records.
+
+**AWS Key Management Service**
+
+<img width="468" alt="Picture11" src="https://github.com/user-attachments/assets/a95bd8e2-0c60-49f5-a02d-55f8fe67e6a5">
+
+**S3 Bucket Encrypted using the KMS Key**
+
+![Picture12](https://github.com/user-attachments/assets/4b5df251-de90-4921-85be-681ad99e8b0b)
+
+S3 Bucket backup is created using Replication Rule.
+
+**Replication Rule**
+
+![Picture13](https://github.com/user-attachments/assets/37fe5c00-64c5-46fb-b7fe-b05788e9660d)
+
+**AWS Glue – Quality Check**
+
+![Picture14](https://github.com/user-attachments/assets/73451184-c000-441b-b664-d8871d979e39)
+
+Quality of the dataset can be assessed using AWS Glue inbuild functions (Detect Sensitive Data and Evaluate Data Quality) and the passed data is stored in the S3 Trusted Folder.
+
+**AWS CloudWatch Dashboard**
+
+![Picture15](https://github.com/user-attachments/assets/97e6762f-e48c-4015-b9df-0db09feb315a)
+
+To monitor the expense and usage, CloudWatch is used. An alarm is also created and added to the dashboard to alarm when the cost exceeds the threshold.
+
+**AWS CloudTrail**
+
+![Picture16](https://github.com/user-attachments/assets/0cb90d27-2e7e-4f37-9511-5bd031927725)
+
+AWS CloudTrail is used to save the userlog in the S3 Bucket to track the API activity to prevent security breaching.
+
+**5.	Insights and Findings:**
+
+Analyze trends and patterns to highlight:
+
+- Changes in property improvement values over 2023 and 2024
+- Variations in property values by zoning district and neighborhood
+- Trends related to the year built and significant improvements
+  
+**6.	Recommendations:**
+
+Provide insights based on findings to inform city planning and development strategies, focusing on areas with notable changes in property values.
+
+**Tools and Technologies:**
+
+- AWS S3 for secure and scalable data storage.
+- AWS Glue and DataBrew for data cleaning, structuring, and governance.
+- AWS Athena for SQL querying and analysis.
+- Excel for data visualization and reporting.
+- AWS EC2 for data publishing and web hosting.
+- AWS CloudWatch and CloudTrail for monitoring data usage and security.
+  
+**Deliverables:**
+
+- A report summarizing methods, findings, and recommendations
+- Visualizations and charts created in Excel
+- Insights for city stakeholders on property improvement trends
+  
+This descriptive analysis project will help in understanding property improvement trends in Vancouver, providing valuable information for urban planning and resource management.
